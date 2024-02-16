@@ -1,3 +1,70 @@
+@import '../../global.scss';
+
 .intro{
-    background-color: chartreuse;
+    background-color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .intro__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+        padding-bottom: 100px;
+
+        .intro__title{
+            font-size: 3rem;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            padding-bottom: 50px;
+        }
+        .intro_sub{
+            font-size: 2.5rem;
+            font-weight: 250;
+            color: rgb(0, 0, 0);
+            padding-bottom: 10px;
+        }
+
+        .intro__subtitle {
+            font-size: 1.5rem;
+            font-weight: 200; // Slightly heavier font for better readability
+            color: #333; // Dark grey color for softer contrast
+            padding-bottom: 40px;
+            background-color: rgba(0, 247, 255, 0.027); // Slightly more visible background color
+            box-shadow: 10px 10px 20px rgba(0,0,0,.1); // Less dramatic shadow
+            border-radius: 25px; // Less rounded corners
+            padding: 10px 20px; // Padding around the text
+            margin: 10px 0; // Space around the element
+            // max-width: 600px; // Limit the width of the element
+            text-align: center; // Center the text
+          }
+
+        .intro__img{
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+    }
+    button{
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+        // align-items: center;
+        // justify-content: center;
+        // display: flex;
+
+        &:hover{
+            background-color: #0056b3;
+        }
+    }
 }

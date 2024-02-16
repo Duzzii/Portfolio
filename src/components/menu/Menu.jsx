@@ -8,14 +8,14 @@ export default function Menu({menuOpen, setMenuOpen}) {
                 <a href="#intro">Home</a>
             </li>
             <li>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio">Projects</a>
             </li>
             <li>
-                <a href="#works">Works</a>
+                <a href="#works">Qualifications</a>
             </li>
-            <li>
+            {/* <li>
                 <a href="#testimonals">Testimonals</a>
-            </li>
+            </li> */}
             <li>
                 <a href="#contact">Contacts</a>
             </li>

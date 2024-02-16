@@ -1,3 +1,47 @@
-.work{
-    background-color: slategray;
+@import '../../global.scss';
+
+.work {
+  padding: 20px;
+  background-color: $mainColor;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 150px;
+
+    // Adjust the number of columns based on the viewport width
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .block {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      h2 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.6;
+      }
+    }
+  }
 }

@@ -1,5 +1,60 @@
+@import '../../global.scss';
+
 .contact{
-    background-color: rgb(255, 0, 25);
-    height: 50px;
+    background-color: $mainColor;
+    height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .contact_details{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        flex-direction: column;
+
+        h1{
+            font-size: 200px;
+            @media (max-width: 800px) {
+                font-size: 150px;
+            }
+            @media (max-width: 500px) {
+                font-size: 100px;
+            }
+        }
+        p{
+            font-size: 15px;
+            padding-bottom: 20px;
+            width: 80%;
+            @media (max-width: 800px) {
+                font-size: 12px;
+                width: 90%;
+            }
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li{
+                margin-right: 20px;
+                font-size: 20px;
+                @media (max-width: 800px) {
+                    font-size: 15px;
+                }
+                a{
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                }
+            }
+        }
+    }
 }
