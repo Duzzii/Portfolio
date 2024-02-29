@@ -3,10 +3,11 @@ import "./works.scss"
 export default function Works() {
   return (
     <div className="work" id="work">
-      <h1>
+       <h1>
         Qualifications
       </h1>
       <div className="grid">
+        
         <div className="block">
           <h2>Education</h2>
           <p>University of Pretoria</p>

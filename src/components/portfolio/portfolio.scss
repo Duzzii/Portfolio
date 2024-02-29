@@ -1,56 +1,39 @@
-@import '../../global.scss';
-
 .portfolio {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-color: $mainColor;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  
+
+  h1 {
+      text-align: center;
+      padding-top: 100px;
+  }
 
   .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    width: 100%; 
-    margin-bottom: 200px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      justify-items: center;
+      padding-top: 100px;
 
-    // Adjust the number of columns based on the viewport width
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 800px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  // ... rest of your code ..
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .block {
-    width: 400px;
-    height: 400px;
-    background-color: #825151;
-    text-align: center;
-    position: relative;
-    // transition: all 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-    &:hover {
-      background-color: #f4f4f4;
-      z-index: 5;
-      width: 70vw; // viewport width
-      height: 70vh; // viewport height
-      position: fixed; // make it fixed
-      top: 50%; // center vertically
-      left: 50%; // center horizontally
-      transform: translate(-50%, -50%); // adjust for the block's own dimensions
-      justify-content: center;
-      align-items: center;
-
-      ~ .block {
-        opacity: 0.5;
+      .block {
+          background-color: #f0f0f0;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          width: 50%;
+          aspect-ratio: 1 / 1; // Makes the block square
       }
-    }
+  }
+}
+
+// Media queries for responsiveness
+@media (max-width: 600px) {
+  .portfolio {
+      .grid {
+          grid-template-columns: 1fr;
+      }
   }
 }
